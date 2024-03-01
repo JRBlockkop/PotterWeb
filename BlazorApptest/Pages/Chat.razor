@@ -1,0 +1,37 @@
+﻿@page "/chat"
+@inject HttpClient Http
+
+<PageTitle>Chat</PageTitle>
+
+<head>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        div .mybox {
+            height: 40vh;
+        }
+        .flex{
+            display:flex;
+            align-items: center;
+            justify-content;
+        }
+        input{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class ="mybox" id="Chat_box">
+    </div>
+    <div class="flex,mybox">
+        <input type="text" name="Text_input" value="" />
+        <input type="button" name="button_input" value="Send it" onclick="sendit()" />
+    </div>
+</body>
+
+
+@code {
+}
