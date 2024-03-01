@@ -12,13 +12,13 @@
             <MudAvatar Color="@houseColor">@houseFstL</MudAvatar>
         </CardHeaderAvatar>
         <CardHeaderContent>
-            <MudText Typo="Typo.body1">@character.Attributes.Name</MudText>
-            <MudText Typo="Typo.body2">@character.Attributes.Gender</MudText>
+            <MudText Typo="Typo.body1">@character?.Attributes?.Name</MudText>
+            <MudText Typo="Typo.body2">@character?.Attributes?.Gender</MudText>
         </CardHeaderContent>
     </MudCardHeader>
-    <MudCardMedia Image="@character.Attributes.Image" Height="200"/>
+    <MudCardMedia Image="@character?.Attributes?.Image" Height="200"/>
     <MudCardContent>
-        <MudText Typo="Typo.body2">Was born in @character.Attributes.Born and died in @character.Attributes.Died</MudText>
+        <MudText Typo="Typo.body2">Was born in @character?.Attributes?.Born and died in @character?.Attributes?.Died</MudText>
     </MudCardContent>
     <MudCardActions>
         <MudIconButton Icon="@Icons.Material.Filled.Favorite" Color="@likecolor" @onclick="@(() => Like())" />
